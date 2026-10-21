@@ -1,0 +1,80 @@
+<!doctype html>
+<!--
+=====================================================================
+  FRIENDS OF HUA — BAY AREA  |  Elementor-friendly redesign
+  ---------------------------------------------------------------------
+  HOW TO USE IN ELEMENTOR
+  1. Paste the <style> block ONCE: Site Settings > Custom CSS
+     (or Page Settings > Advanced > Custom CSS, or the first HTML widget).
+  2. Each block marked "SECTION" below is self-contained. Create one
+     full-width Elementor Container per section and drop an
+     "HTML" widget inside, then paste that section's markup.
+  3. All styles are scoped under .fohua so nothing leaks into the
+     theme header/footer. Anchor IDs match the existing page
+     (#leadership, #contribute-sec, #upcoming-events-sec, etc.).
+  4. Colors/fonts are HUA's own (from the hua.edu theme): purple #2D0B44 /
+     #651366, yellow #FEBE10 buttons, #FDBF0F→#E53923 gradient, Poppins + Open Sans.
+=====================================================================
+-->
+<!--
+  PHOTO CREDITS (free Unsplash License — no attribution required, but appreciated):
+  Golden Gate Bridge – Venti Views · Golden Gate tower – Logan Weaver
+  Temple tower – Satish Dharmavarapu · Classical dance – Sooraj Perambra
+  Diyas – Udayaditya Barua · Event photos – hua.edu media library
+  TIP: before going live, download these and upload to the WordPress Media
+  Library, then swap the URLs so the page doesn't depend on Unsplash.
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Friends of HUA — Bay Area</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+<!-- ===================== STYLE (paste once) ===================== -->
+<style>
+/* ===== HUA brand tokens (taken from hua.edu theme) ===== */
+.fohua{
+  --purple:#2D0B44;        /* headings */
+  --purple-deep:#280A41;   /* header gradient start */
+  --plum:#651366;          /* links / header gradient end */
+  --plum-btn:#5F2169;      /* button text */
+  --magenta:#A71A5B;       /* link hover */
+  --yellow:#FEBE10;        /* primary button */
+  --yellow-hover:#F0C505;
+  --orange:#FF8A01;        /* form borders / accents */
+  --saffron:#F2A244;
+  --red-orange:#E53923;
+  --grad:linear-gradient(86deg,#FDBF0F 0%,#E53923 100%);
+  --header-grad:linear-gradient(90deg,#280A41 0%,#651366 100%);
+  --cream:#F3E4D1; --cream-soft:#FBF4EA; --peach:#F7CB8A;
+  --ink:#404040; --muted:#6E6272; --line:#EADBC6;
+  --radius:12px; --shadow:0 12px 30px rgba(45,11,68,.10);
+  --head:'Poppins',sans-serif; --body:'Open Sans',sans-serif;
+  font-family:var(--body); color:var(--ink); line-height:1.7; font-size:16px;
+}
+.fohua *,.fohua *::before,.fohua *::after{box-sizing:border-box}
+.fohua img{max-width:100%;display:block;height:auto}
+.fohua a{color:var(--plum)}
+.fohua a:hover{color:var(--magenta)}
+.fohua ul{margin:0}
+.fohua .fh-wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+.fohua section{padding:80px 0;scroll-margin-top:110px}
+/* Om-pattern sections, like the hua.edu site background */
+.fohua .fh-alt{background:var(--cream-soft) url('https://www.hua.edu/wp-content/themes/hua/img/om.png') repeat;background-blend-mode:multiply}
+
+/* headings with the HUA small-logo marker */
+.fohua .fh-head{text-align:center;margin-bottom:46px}
+.fohua .fh-title{font-family:var(--head);font-weight:700;font-size:clamp(28px,3.4vw,40px);line-height:1.2;color:var(--purple);margin:0 0 12px}
+.fohua .fh-head .fh-title::before{content:"";display:block;width:46px;height:46px;margin:0 auto 12px;
+  background:url('https://www.hua.edu/wp-content/uploads/2025/09/header-start-icon.png') center/contain no-repeat}
+.fohua .fh-title-bar{display:block;width:70px;height:4px;border-radius:4px;background:var(--grad);margin:0 auto 16px}
+.fohua .fh-eyebrow{display:inline-block;font-family:var(--head);font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--red-orange);margin-bottom:8px}
+.fohua .fh-lead{color:var(--muted);font-size:17px;max-width:660px;margin:0}
+.fohua .fh-head .fh-lead{margin:0 auto}
+
+/* buttons — HUA style: yellow w/ purple text, 5px radius */
+.fohua .fh-btn{display:inline-flex;align-items:center;gap:8px;padding:15px 34px;border-radius:5px;font-family:var(--head);font-weight:600;font-size:16px;text-decoration:none;transition:all .2s;border:2px solid transparent;cursor:pointer;line-height:1.2}
+.fohua .fh-btn-primary{background:var(--yellow);color:var(--plum-btn)!important}
+.fohua .fh-btn-primary:hover{background:var(--yellow-hover);transform:translateY(-2px);box-shadow:0 8px 18px rgba(254,190,16,.35)}
